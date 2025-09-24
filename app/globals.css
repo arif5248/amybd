@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -23,4 +23,19 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+/* Reusable helpers */
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
+.card {
+  @apply rounded-xl border border-slate-200 bg-white shadow-sm;
+}
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2
+           text-sm font-medium text-white active:translate-y-px transition;
+    /* default color (can now be overridden by utility classes) */
+    @apply bg-slate-900 hover:bg-slate-800;
+  }
 }

@@ -1,0 +1,68 @@
+.wrap {
+  text-align: center;
+  color: #fff;
+}
+
+/* your provided tagline rules (matched class name) */
+/* components/hero/hero_tag_section/HeroTagSection.module.css */
+.tagline {
+  /* Use your local font first; fall back to a Bengali-capable family */
+  font-family: var(--font-amy-tagline), system-ui, sans-serif;
+
+  /* Your target look */
+  color: #fff;
+  font-size: 56px;
+
+  /* Try the *actual* weight of the file.
+     If you see it looks too thin or too thick, change to 600 or 400 to match the TTF. */
+  font-weight: 700;
+
+  letter-spacing: 5px;
+
+  /* 20px on a 56px font can clip glyphs. Try 1.0–1.15 for the same compact feel without clipping. */
+  line-height: 1.05;
+
+  padding-bottom: 16px;
+  text-shadow: 1px 1px #0023b9;
+
+  /* Make rendering closer to design across platforms */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Prevent browser from faking bold/italics if weight doesn't match */
+  font-synthesis-weight: none;
+  font-synthesis-style: none;
+
+  /* Keep kerning on for tighter letter shapes */
+  font-kerning: normal;
+  font-variant-ligatures: normal;
+}
+
+/* row of items with separators like in your screenshot */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+/* add vertical bar between items (not before the first) */
+.item + .item::before {
+  content: '|';
+  opacity: 0.7;
+  margin-right: 8px;
+}
+
+/* icon size/margin */
+.icon {
+  width: 18px;
+  height: 18px;
+}

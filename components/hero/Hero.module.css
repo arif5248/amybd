@@ -1,0 +1,16 @@
+.heroSection {
+  /* your exact props */
+  background-image: conic-gradient(hsl(228deg 100% 32% / 36%) 0 0),
+    url('@/public/brand/bgice.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin: 0;
+  overflow: visible;
+  padding: 40px 0 20px;
+  position: relative;
+
+  /* helpful: reserve height so there’s no layout shift */
+  min-height: 60vh;
+}
