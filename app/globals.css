@@ -39,3 +39,14 @@ body {
     @apply bg-slate-900 hover:bg-slate-800;
   }
 }
+:root {
+  --bg-color: rgba(221, 255, 244, 0.6);
+  --base-color: #fafffc;
+}
+
+@layer components {
+  .section-surface {
+    @apply rounded-2xl p-4 md:p-6;
+    background: linear-gradient(180deg, var(--bg-color), var(--base-color));
+  }
+}
